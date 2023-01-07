@@ -10,11 +10,6 @@ interface Errors {
   email?: string;
 }
 
-interface Touched {
-  name: boolean;
-  email: boolean;
-}
-
 const GenericForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -71,8 +66,6 @@ const GenericForm = () => {
     if (!formData.name || !formData.email) {
       return;
     }
-
-    console.log('handle form submit');
   };
 
   const isFormValid = () => {
